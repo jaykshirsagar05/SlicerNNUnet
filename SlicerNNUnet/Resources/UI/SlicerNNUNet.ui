@@ -68,6 +68,63 @@
     </widget>
    </item>
    <item>
+    <widget class="ctkCollapsibleButton" name="nnUNetApiSettingsCollapsibleButton">
+     <property name="text">
+      <string>nnUNet API Settings</string>
+     </property>
+     <property name="collapsed">
+      <bool>true</bool>
+     </property>
+     <layout class="QFormLayout" name="formLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="apiUrlTitleLabel">
+        <property name="text">
+         <string>API URL:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="apiUrlLineEdit">
+        <property name="toolTip">
+         <string>Base URL of the nnUNet inference API (without /predict or /upload_correction)</string>
+        </property>
+        <property name="placeholderText">
+         <string>http://localhost:8000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QLabel" name="apiEndpointsInfoLabel">
+        <property name="text">
+         <string>The API will use /predict for segmentation and 
+/upload_correction/{file_id} for uploading corrected masks.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QRadioButton" name="useLocalRadioButton">
+        <property name="text">
+         <string>Use Local nnUNet</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QRadioButton" name="useApiRadioButton">
+        <property name="text">
+         <string>Use Remote API</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="ctkCollapsibleButton" name="nnUNetSettingsCollapsibleButton">
      <property name="text">
       <string>nnUNet Run Settings</string>
@@ -331,6 +388,19 @@ augmentation (TTA):</string>
     </widget>
    </item>
    <item>
+    <widget class="QPushButton" name="uploadButton">
+     <property name="toolTip">
+      <string>Upload current segmentation to the API.</string>
+     </property>
+     <property name="text">
+      <string>Upload Corrected Segmentation</string>
+     </property>
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QTextEdit" name="logTextEdit">
      <property name="lineWrapMode">
       <enum>QTextEdit::NoWrap</enum>
@@ -398,6 +468,12 @@ augmentation (TTA):</string>
     </hint>
     <hint type="destinationlabel">
      <x>248</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
      <y>61</y>
     </hint>
    </hints>

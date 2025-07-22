@@ -8,6 +8,7 @@ set(MODULE_PYTHON_SCRIPTS
   ${MODULE_NAME}Lib/InstallLogic.py
   ${MODULE_NAME}Lib/Parameter.py
   ${MODULE_NAME}Lib/SegmentationLogic.py
+  ${MODULE_NAME}Lib/ApiSegmentationLogic.py
   ${MODULE_NAME}Lib/Signal.py
   ${MODULE_NAME}Lib/Widget.py
   Testing/__init__.py

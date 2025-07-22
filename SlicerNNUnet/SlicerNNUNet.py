@@ -16,6 +16,8 @@ class SlicerNNUNet(ScriptedLoadableModule):
             "This extension is meant to streamline the integration of nnUnet based models into 3D Slicer.<br>"
             "It allows for quick and reliable nnUNet dependency installation in 3D Slicer environment and provides"
             " simple logic to launch nnUNet prediction on given directories.<br><br>"
+            "The extension also supports integration with remote nnUNet inference APIs, allowing users to"
+            " send volumes for segmentation and upload corrected segmentations.<br><br>"
             "The installation steps are based on the work done in the "
             '<a href="https://github.com/lassoan/SlicerTotalSegmentator/">Slicer Total Segmentator extension</a>'
         )
